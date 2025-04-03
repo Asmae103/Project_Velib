@@ -55,5 +55,6 @@ import java.nio.charset.Charset;
 		launch(args);
 		ConnectAPI con = new ConnectAPI();
 		con.chargeAPI();
+		
 	}
 }
