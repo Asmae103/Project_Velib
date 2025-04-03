@@ -105,7 +105,7 @@ public class ConnectAPI {
 	        return new Carte(); // Retourner l'objet sans modification
 	    }
 
-	    //System.out.println(jsonData); // Afficher les données pour voir le contenu
+	    System.out.println(jsonData); // Afficher les données pour voir le contenu
         
 	  try {
 		  //ON CONVERTIT LEchaîne de caractères JSON (jsonData) en un objet JSONArray
