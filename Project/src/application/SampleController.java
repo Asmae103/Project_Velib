@@ -21,22 +21,22 @@ public class SampleController {
     private Label numS;
 
     @FXML
-    private Text numero ,capacite,nom, arrondissement,ville,statutOuvert,velodisp, attachedisp, cB ;
+    private Text Numero ,capacite,Nom, arrondissement,ville,statutOuvert,velodisp, attachedisp, cB;
     
     @FXML
     private TableView<Station> tableView;
     
     @FXML
-    private TableColumn<Station, String> Num; 
+    private TableColumn<Station, String> numero; 
     
     @FXML
-    private TableColumn<Station, String> Nom; 
+    private TableColumn<Station, String> nom; 
     
     @FXML 
-    private TableColumn<Station, Boolean> CB; 
+    private TableColumn<Station, String> cb; 
     
     @FXML 
-    private TableColumn<Station, Boolean> Ouvert; 
+    private TableColumn<Station, String> ouvert; 
    /* 
     public void chargerStations() {
         ObservableList<Station> stationsList = Carte.getStation();  // Appeler la méthode getStations pour obtenir la liste
@@ -51,10 +51,10 @@ public class SampleController {
     //    c= con.chargeStation();
     	c.toString();
         // Lier les colonnes aux attributs de Station
-        Num.setCellValueFactory(new PropertyValueFactory<>("numero"));
-        Nom.setCellValueFactory(new PropertyValueFactory<>("nom"));
-        CB.setCellValueFactory(new PropertyValueFactory<>("cB"));
-        Ouvert.setCellValueFactory(new PropertyValueFactory<>("statutOuvert"));
+        numero.setCellValueFactory(new PropertyValueFactory<>("numero"));
+        nom.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        cb.setCellValueFactory(new PropertyValueFactory<>("cb"));
+        ouvert.setCellValueFactory(new PropertyValueFactory<>("statutOuvert"));
        // tableView.getItems().setAll(c.getStation());
         tableView.setItems(c.getStation()); //pour la liste 
         

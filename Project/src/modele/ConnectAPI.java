@@ -105,7 +105,7 @@ public class ConnectAPI {
 	        return new Carte(); // Retourner l'objet sans modification
 	    }
 
-	    System.out.println(jsonData); // Afficher les données pour voir le contenu
+	  //  System.out.println(jsonData); // Afficher les données pour voir le contenu
         
 	  try {
 		  //ON CONVERTIT LEchaîne de caractères JSON (jsonData) en un objet JSONArray
@@ -115,10 +115,10 @@ public class ConnectAPI {
 			 
 			  // Créer une instance de Station et définir ses propriétés
 	            Station station = new Station();
-	            station.setNumero(ligne.getInt("stationcode"));
+	            station.setNumero(ligne.getString("stationcode"));
 	            station.setNom(ligne.getString("name"));
-	            station.setCB(ligne.getBoolean("cB"));
-	            station.setStatutOuvert(ligne.getBoolean("statutOuvert"));
+	            station.setCB(ligne.getString("is_renting"));
+	            station.setStatutOuvert(ligne.getString("is_installed"));
 
 	            // Ajouter la station à la liste des stations de l'objet Carte
 	            carte.addStation(station);  // c est l'instance de la classe Carte

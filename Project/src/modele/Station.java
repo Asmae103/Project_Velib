@@ -1,138 +1,133 @@
 package modele;
 
 public class Station {
-	private int Numero , Arrondissement, Deparetement ,Capacité , VelosDispo, AttachesDispo ;
-	private String Nom,Ville ;
-	private boolean  CB , StatutOuvert, Mobile;
-	
-	
+	private int arrondissement, deparetement, capacité, velosDispo, attachesDispo;
+	private String nom, ville, numero, cb, statutOuvert;
+	private boolean mobile;
+
 	public Station() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Station(int numero, int arrondissement, int deparetement, int capacité, int velosDispo, int attachesDispo,
-			String nom, String ville, boolean cB, boolean statutOuvert, boolean mobile) {
+	public Station(int arrondissement, int deparetement, int capacité, int velosDispo, int attachesDispo, String numero,
+			String nom, String ville, String cb, boolean statutOuvert, boolean mobile) {
 		super();
-		Numero = numero;
-		Arrondissement = arrondissement;
-		Deparetement = deparetement;
-		Capacité = capacité;
-		VelosDispo = velosDispo;
-		AttachesDispo = attachesDispo;
-		Nom = nom;
-		Ville = ville;
-		CB = cB;
-		StatutOuvert = statutOuvert;
-		Mobile = mobile;
+		numero = numero;
+		arrondissement = arrondissement;
+		deparetement = deparetement;
+		capacité = capacité;
+		velosDispo = velosDispo;
+		attachesDispo = attachesDispo;
+		nom = nom;
+		ville = ville;
+		cb = cb;
+		statutOuvert = statutOuvert;
+		mobile = mobile;
 	}
 
-	public Station(int numero, String nom, boolean cB, boolean statutOuvert) {
+	public Station(String numero, String nom, String cb, boolean statutOuvert) {
 		super();
-		Numero = numero;
-		Nom = nom;
-		CB = cB;
-		StatutOuvert = statutOuvert;
+		numero = numero;
+		nom = nom;
+		cb = cb;
+		statutOuvert = statutOuvert;
 	}
 
-	public int getNumero() {
-		return Numero;
+	public String getNumero() {
+		return numero;
 	}
 
-	public void setNumero(int numero) {
-		Numero = numero;
+	public void setNumero(String numero) {
+		this.numero = numero;
 	}
 
 	public int getArrondissement() {
-		return Arrondissement;
+		return arrondissement;
 	}
 
 	public void setArrondissement(int arrondissement) {
-		Arrondissement = arrondissement;
+		arrondissement = arrondissement;
 	}
 
 	public int getDeparetement() {
-		return Deparetement;
+		return deparetement;
 	}
 
 	public void setDeparetement(int deparetement) {
-		Deparetement = deparetement;
+		deparetement = deparetement;
 	}
 
 	public int getCapacité() {
-		return Capacité;
+		return capacité;
 	}
 
 	public void setCapacité(int capacité) {
-		Capacité = capacité;
+		capacité = capacité;
 	}
 
 	public int getVelosDispo() {
-		return VelosDispo;
+		return velosDispo;
 	}
 
 	public void setVelosDispo(int velosDispo) {
-		VelosDispo = velosDispo;
+		velosDispo = velosDispo;
 	}
 
 	public int getAttachesDispo() {
-		return AttachesDispo;
+		return attachesDispo;
 	}
 
 	public void setAttachesDispo(int attachesDispo) {
-		AttachesDispo = attachesDispo;
+		attachesDispo = attachesDispo;
 	}
 
 	public String getNom() {
-		return Nom;
+		return this.nom;
 	}
 
 	public void setNom(String nom) {
-		Nom = nom;
+		this.nom = nom;
 	}
 
 	public String getVille() {
-		return Ville;
+		return ville;
 	}
 
 	public void setVille(String ville) {
-		Ville = ville;
+		ville = ville;
 	}
 
-	public boolean isCB() {
-		return CB;
+	public String getCb() {
+		return this.cb;
 	}
 
-	public void setCB(boolean cB) {
-		CB = cB;
+	public void setCB(String cb) {
+		this.cb = cb;
 	}
 
-	public boolean isStatutOuvert() {
-		return StatutOuvert;
+	public String getStatutOuvert() {
+		return this.statutOuvert;
 	}
 
-	public void setStatutOuvert(boolean statutOuvert) {
-		StatutOuvert = statutOuvert;
+	public void setStatutOuvert(String statutOuvert) {
+		this.statutOuvert = statutOuvert;
 	}
 
 	public boolean isMobile() {
-		return Mobile;
+		return mobile;
 	}
 
 	public void setMobile(boolean mobile) {
-		Mobile = mobile;
+		mobile = mobile;
 	}
 
 	@Override
 	public String toString() {
-		return "Station [Numero=" + Numero + ", Arrondissement=" + Arrondissement + ", Deparetement=" + Deparetement
-				+ ", Capacité=" + Capacité + ", VelosDispo=" + VelosDispo + ", AttachesDispo=" + AttachesDispo
-				+ ", Nom=" + Nom + ", Ville=" + Ville + ", CB=" + CB + ", StatutOuvert=" + StatutOuvert + ", Mobile="
-				+ Mobile + "]";
+		return "Station [Numero=" + numero + ", Arrondissement=" + arrondissement + ", Deparetement=" + deparetement
+				+ ", Capacité=" + capacité + ", VelosDispo=" + velosDispo + ", AttachesDispo=" + attachesDispo
+				+ ", Nom=" + nom + ", Ville=" + ville + ", CB=" + cb + ", StatutOuvert=" + statutOuvert + ", Mobile="
+				+ mobile + "]";
 	}
-	
-	
-	
-	
 
 }

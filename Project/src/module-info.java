@@ -5,4 +5,5 @@ module Project {
 	requires javafx.base;
 	
 	opens application to javafx.graphics, javafx.fxml;
+	opens modele to javafx.base;
 }
