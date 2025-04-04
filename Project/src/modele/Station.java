@@ -1,8 +1,8 @@
 package modele;
 
 public class Station {
-	private int arrondissement, deparetement, capacité, velosDispo, attachesDispo;
-	private String nom, ville, numero, cb, statutOuvert;
+	private int  deparetement, capacite, velosDispo, attachesDispo;
+	private String nom, ville, numero, cb, statutOuvert, arrondissement;
 	private boolean mobile;
 
 	public Station() {
@@ -10,28 +10,27 @@ public class Station {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Station(int arrondissement, int deparetement, int capacité, int velosDispo, int attachesDispo, String numero,
-			String nom, String ville, String cb, boolean statutOuvert, boolean mobile) {
+	public Station(String arrondissement, int deparetement, int capacite, int velosDispo, int attachesDispo, String numero,
+			String nom, String ville, String cb, String statutOuvert, boolean mobile) {
 		super();
-		numero = numero;
-		arrondissement = arrondissement;
-		deparetement = deparetement;
-		capacité = capacité;
-		velosDispo = velosDispo;
-		attachesDispo = attachesDispo;
-		nom = nom;
-		ville = ville;
-		cb = cb;
-		statutOuvert = statutOuvert;
-		mobile = mobile;
-	}
+		this.numero = numero;
+		this.arrondissement = arrondissement;
+		this.deparetement = deparetement;
+		this.capacite = capacite;
+		this.velosDispo = velosDispo;
+		this.attachesDispo = attachesDispo;
+		this.nom = nom;
+		this.ville = ville;
+		this.cb = cb;
+		this.statutOuvert = statutOuvert;
+		}
 
-	public Station(String numero, String nom, String cb, boolean statutOuvert) {
+	public Station(String numero, String nom, String cb, String statutOuvert) {
 		super();
-		numero = numero;
-		nom = nom;
-		cb = cb;
-		statutOuvert = statutOuvert;
+		this.numero = numero;
+		this.nom = nom;
+		this.cb = cb;
+		this.statutOuvert = statutOuvert;
 	}
 
 	public String getNumero() {
@@ -42,12 +41,12 @@ public class Station {
 		this.numero = numero;
 	}
 
-	public int getArrondissement() {
+	public String getArrondissement() {
 		return arrondissement;
 	}
 
-	public void setArrondissement(int arrondissement) {
-		arrondissement = arrondissement;
+	public void setArrondissement(String arrondissement) {
+		this.arrondissement = arrondissement;
 	}
 
 	public int getDeparetement() {
@@ -55,15 +54,15 @@ public class Station {
 	}
 
 	public void setDeparetement(int deparetement) {
-		deparetement = deparetement;
+		this.deparetement = deparetement;
 	}
 
-	public int getCapacité() {
-		return capacité;
+	public int getCapacite() {
+		return capacite;
 	}
 
-	public void setCapacité(int capacité) {
-		capacité = capacité;
+	public void setCapacite(int capacite) {
+		this.capacite = capacite;
 	}
 
 	public int getVelosDispo() {
@@ -71,7 +70,7 @@ public class Station {
 	}
 
 	public void setVelosDispo(int velosDispo) {
-		velosDispo = velosDispo;
+		this.velosDispo = velosDispo;
 	}
 
 	public int getAttachesDispo() {
@@ -79,7 +78,7 @@ public class Station {
 	}
 
 	public void setAttachesDispo(int attachesDispo) {
-		attachesDispo = attachesDispo;
+		this.attachesDispo = attachesDispo;
 	}
 
 	public String getNom() {
@@ -95,7 +94,7 @@ public class Station {
 	}
 
 	public void setVille(String ville) {
-		ville = ville;
+		this.ville = ville;
 	}
 
 	public String getCb() {
@@ -119,13 +118,13 @@ public class Station {
 	}
 
 	public void setMobile(boolean mobile) {
-		mobile = mobile;
+		this.mobile = mobile;
 	}
 
 	@Override
 	public String toString() {
 		return "Station [Numero=" + numero + ", Arrondissement=" + arrondissement + ", Deparetement=" + deparetement
-				+ ", Capacité=" + capacité + ", VelosDispo=" + velosDispo + ", AttachesDispo=" + attachesDispo
+				+ ", Capacité=" + capacite + ", VelosDispo=" + velosDispo + ", AttachesDispo=" + attachesDispo
 				+ ", Nom=" + nom + ", Ville=" + ville + ", CB=" + cb + ", StatutOuvert=" + statutOuvert + ", Mobile="
 				+ mobile + "]";
 	}

@@ -1,38 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="640.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<AnchorPane minHeight="440.0" minWidth="500.0" prefHeight="554.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
          <children>
-            <Label id="stationcode" fx:id="numS" layoutX="183.0" layoutY="104.0" prefHeight="18.0" prefWidth="219.0" text="Station N: " />
-            <Label id="name" layoutX="64.0" layoutY="174.0" prefHeight="18.0" prefWidth="44.0" text="Nom " />
-            <Label id="" layoutX="66.0" layoutY="207.0" text="Arrondissement " />
-            <Label id="stationcode" layoutX="64.0" layoutY="241.0" text="Ville" />
-            <Label id="stationcode" layoutX="69.0" layoutY="269.0" text="Ouvert" />
-            <Label id="stationcode" layoutX="412.0" layoutY="165.0" text="Capacité " />
-            <Label id="stationcode" layoutX="384.0" layoutY="207.0" text="Velos disponible" />
-            <Label id="stationcode" layoutX="374.0" layoutY="241.0" text="Attaches disponible" />
-            <Label id="stationcode" layoutX="396.0" layoutY="269.0" text="Carte bleu" />
-            <TableView fx:id="tableView" layoutY="335.0" prefHeight="219.0" prefWidth="838.0">
+            <Label id="stationcode" fx:id="numS" layoutX="200.0" layoutY="179.0" prefHeight="18.0" prefWidth="105.0" text="Station N: " />
+            <Label id="name" layoutX="64.0" layoutY="215.0" prefHeight="18.0" prefWidth="44.0" text="Nom " />
+            <Label id="" layoutX="44.0" layoutY="241.0" text="Arrondissement " />
+            <Label id="stationcode" layoutX="64.0" layoutY="268.0" text="Ville" />
+            <Label id="stationcode" layoutX="69.0" layoutY="296.0" text="Ouvert" />
+            <Label id="stationcode" layoutX="404.0" layoutY="208.0" text="Capacité " />
+            <Label id="stationcode" layoutX="376.0" layoutY="242.0" text="Velos disponible" />
+            <Label id="stationcode" layoutX="376.0" layoutY="266.0" text="Attaches disponible" />
+            <Label id="stationcode" layoutX="392.0" layoutY="305.0" text="Carte bleu" />
+            <TableView fx:id="tableView" layoutY="335.0" onMouseClicked="#selectStation" prefHeight="219.0" prefWidth="691.0">
               <columns>
                 <TableColumn fx:id="numero" prefWidth="75.0" text="numero" />
-                <TableColumn fx:id="nom" prefWidth="593.0" text="nom " />
-                  <TableColumn fx:id="cb" minWidth="0.0" prefWidth="89.0" text="cb" />
-                  <TableColumn fx:id="ouvert" text="ouvert " />
+                <TableColumn fx:id="nom" prefWidth="286.3333435058594" text="nom " />
+                  <TableColumn fx:id="cb" minWidth="0.0" prefWidth="173.33331298828125" text="cb" />
+                  <TableColumn fx:id="ouvert" prefWidth="241.66668701171875" text="ouvert " />
               </columns>
             </TableView>
-            <Text fx:id="num" layoutX="308.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="capacite" layoutX="509.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="no" layoutX="117.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="arrondissement" layoutX="242.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="ville" layoutX="144.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="statutOu" layoutX="157.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="velodisp" layoutX="509.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="attachedisp" layoutX="522.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="cB" layoutX="496.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="codeS" layoutX="306.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="capacite" layoutX="511.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="firstName" layoutX="143.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="arrondissement" layoutX="165.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="ville" layoutX="146.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="statutOuv" layoutX="157.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="velodisp" layoutX="511.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="attachedisp" layoutX="520.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="cB" layoutX="511.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <RadioButton layoutX="14.0" layoutY="39.0" mnemonicParsing="false" text="1" />
+      <RadioButton layoutX="50.0" layoutY="75.0" mnemonicParsing="false" text="7" />
+      <RadioButton layoutX="52.0" layoutY="39.0" mnemonicParsing="false" text="2" />
+      <RadioButton layoutX="14.0" layoutY="75.0" mnemonicParsing="false" text="6" />
+      <RadioButton layoutX="95.0" layoutY="75.0" mnemonicParsing="false" text="8" />
+      <RadioButton layoutX="96.0" layoutY="39.0" mnemonicParsing="false" text="3" />
+      <RadioButton layoutX="143.0" layoutY="75.0" mnemonicParsing="false" text="9" />
+      <RadioButton layoutX="179.0" layoutY="39.0" mnemonicParsing="false" text="5" />
+      <RadioButton layoutX="140.0" layoutY="39.0" mnemonicParsing="false" text="4" />
+      <RadioButton layoutX="52.0" layoutY="105.0" mnemonicParsing="false" text="12" />
+      <RadioButton layoutX="11.0" layoutY="105.0" mnemonicParsing="false" text="11" />
+      <RadioButton layoutX="94.0" layoutY="105.0" mnemonicParsing="false" text="13" />
+      <RadioButton layoutX="179.0" layoutY="75.0" mnemonicParsing="false" text="10" />
+      <RadioButton layoutX="132.0" layoutY="135.0" mnemonicParsing="false" text="19" />
+      <RadioButton layoutX="92.0" layoutY="133.0" mnemonicParsing="false" text="18" />
+      <RadioButton layoutX="54.0" layoutY="135.0" mnemonicParsing="false" text="17" />
+      <RadioButton layoutX="11.0" layoutY="134.0" mnemonicParsing="false" text="16" />
+      <RadioButton layoutX="179.0" layoutY="107.0" mnemonicParsing="false" text="15" />
+      <RadioButton layoutX="132.0" layoutY="107.0" mnemonicParsing="false" text="14" />
+      <RadioButton layoutX="176.0" layoutY="134.0" mnemonicParsing="false" text="20" />
+      <Line endX="-21.66668701171875" endY="84.16665649414062" layoutX="256.0" layoutY="90.0" startX="-21.66668701171875" startY="-37.666664123535156" />
+      <Line endX="-21.66668701171875" endY="105.66665649414062" layoutX="468.0" layoutY="70.0" startX="-21.66668701171875" startY="-37.666664123535156" />
+      <RadioButton layoutX="298.0" layoutY="95.0" mnemonicParsing="false" text="93" />
+      <RadioButton layoutX="253.0" layoutY="95.0" mnemonicParsing="false" text="92" />
+      <RadioButton layoutX="387.0" layoutY="95.0" mnemonicParsing="false" text="95" />
+      <RadioButton layoutX="342.0" layoutY="95.0" mnemonicParsing="false" text="94" />
+      <RadioButton layoutX="464.0" layoutY="95.0" mnemonicParsing="false" text="Mobile" />
+      <Line endX="256.0" endY="-4.333343505859375" layoutX="431.0" layoutY="179.0" startX="-424.0" startY="-4.333343505859375" />
          </children>
       </AnchorPane>
