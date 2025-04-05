@@ -97,6 +97,8 @@ public class SampleController {
     		
     	}
     }
+    //FNNN?VNCNV?NC?NKV
+    
     
    /* public void setMain(Main main) {
         this.main = main;
