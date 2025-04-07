@@ -119,6 +119,24 @@ public class ConnectAPI {
 	            station.setNom(ligne.getString("name"));
 	            station.setCB(ligne.getString("is_renting"));
 	            station.setStatutOuvert(ligne.getString("is_installed"));
+	            station.setCapacite(ligne.getInt("capacity"));
+	            station.setVille(ligne.getString("nom_arrondissement_communes"));
+	            station.setVelosDispo(ligne.getInt("numbikesavailable"));
+	            station.setAttachesDispo(ligne.getInt("numdocksavailable"));
+	            
+	            int arrondissement =0;
+	            String ville = ligne.getString("nom_arrondissement_communes");
+	            if(ville.equalsIgnoreCase("Paris")) {
+	            	String codeS = ligne.getString("stationcode");
+	            	if( codeS.length()>= 2) {
+	            		try {
+	            			arrondissement= Integer.parseInt(codeS.substring(0,2));//récupérer les deux premiers chiffres du codeS(sous forme de texte) et à les convertir en entier (int).
+	            		}catch(NumberFormatException e) {
+	            			System.out.println("Erreur"+ codeS);
+	            		}
+	            	}
+	            }
+	            station.setArrondissement(arrondissement);
 
 	            // Ajouter la station à la liste des stations de l'objet Carte
 	            carte.addStation(station);  // c est l'instance de la classe Carte

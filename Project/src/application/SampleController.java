@@ -22,7 +22,7 @@ public class SampleController {
     private Label numS;
 
     @FXML
-    private Text Numero ,capacite,Nom, arrondissement,ville,statutOuvert,velodisp, attachedisp, cB;
+    private Text Numero ,capacite,Nom, arrondissement,villeTexte,statutOuvert,velodisp, attachesDispo, cB;
     
     @FXML
     private TableView<Station> tableView;
@@ -54,12 +54,12 @@ public class SampleController {
         tableView.setItems(stationsList);  // Lier la liste des stations au TableView
     }*/
    // private Carte c = new Carte();
-    private Carte c= con.chargeStation();
+    private Carte c;//= con.chargeStation();
     
   
     @FXML
     public void initialize() {
-    //    c= con.chargeStation();
+       c= con.chargeStation();
     	c.toString();
         // Lier les colonnes aux attributs de Station
         numero.setCellValueFactory(new PropertyValueFactory<>("numero"));
@@ -68,20 +68,26 @@ public class SampleController {
         ouvert.setCellValueFactory(new PropertyValueFactory<>("statutOuvert"));
        // tableView.getItems().setAll(c.getStation());
         tableView.setItems(c.getStation()); //pour la liste 
-    }
+        
     
-    @FXML
+
+    }
+    /**
+    @param Station 
+    */
     public void selectStation(MouseEvent event) {
     	Station station = tableView.getSelectionModel().getSelectedItem();
     	System.out.println("test");
+    	System.out.println("Arr: " + station.getArrondissement());
     	if(station != null) {
     		codeS.setText(station.getNumero());
     		firstName.setText(station.getNom());
-    		arrondissement.setText(station.getArrondissement());
-    		ville.setText(station.getVille());
+    		arrondissement.setText(String.valueOf(station.getArrondissement()));
+    		villeTexte.setText(station.getVille());
     		statutOuv.setText(station.getStatutOuvert());
     		capacite.setText(String.valueOf(station.getCapacite()));
     		velodisp.setText(String.valueOf(station.getVelosDispo()));
+    		attachesDispo.setText(String.valueOf(station.getAttachesDispo()));
     		cB.setText(station.getCb());
     		
     	}
@@ -89,10 +95,11 @@ public class SampleController {
     		codeS.setText("");
     		firstName.setText("");
     		arrondissement.setText("");
-    		ville.setText("");
+    		villeTexte.setText("");
     		statutOuv.setText("");
     		capacite.setText("");
     		velodisp.setText("");
+    		attachesDispo.setText("");
     		cB.setText("");
     		
     	}
@@ -133,6 +140,3 @@ public class SampleController {
     	}
     }*/
 }
-
-
-

@@ -1,8 +1,8 @@
 package modele;
 
 public class Station {
-	private int  deparetement, capacite, velosDispo, attachesDispo;
-	private String nom, ville, numero, cb, statutOuvert, arrondissement;
+	private int  deparetement, capacite, velosDispo, attachesDispo , arrondissement;
+	private String nom, ville, numero, cb, statutOuvert;
 	private boolean mobile;
 
 	public Station() {
@@ -10,7 +10,7 @@ public class Station {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Station(String arrondissement, int deparetement, int capacite, int velosDispo, int attachesDispo, String numero,
+	public Station(int arrondissement, int deparetement, int capacite, int velosDispo, int attachesDispo, String numero,
 			String nom, String ville, String cb, String statutOuvert, boolean mobile) {
 		super();
 		this.numero = numero;
@@ -41,12 +41,12 @@ public class Station {
 		this.numero = numero;
 	}
 
-	public String getArrondissement() {
+	public int getArrondissement() {
 		return arrondissement;
 	}
 
-	public void setArrondissement(String arrondissement) {
-		this.arrondissement = arrondissement;
+	public void setArrondissement(int arrondissement2) {
+		this.arrondissement = arrondissement2;
 	}
 
 	public int getDeparetement() {
