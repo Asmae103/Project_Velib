@@ -53,7 +53,7 @@ public class ConnectAPI {
 		System.out.println(getFileContent("data.json"));
 	}
 
-	private static String getFileContent(String fileName) {
+	public static String getFileContent(String fileName) {
 		InputStream inputStream = Main.class.getResourceAsStream(fileName);
 		String output = "";
 
