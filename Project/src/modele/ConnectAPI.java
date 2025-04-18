@@ -131,6 +131,9 @@ public class ConnectAPI {
 	            	if( codeS.length()>= 2) {
 	            		try {
 	            			arrondissement= Integer.parseInt(codeS.substring(0,2));//récupérer les deux premiers chiffres du codeS(sous forme de texte) et à les convertir en entier (int).
+	            			if(codeS.length()== 4) {
+	            				arrondissement = Integer.parseInt(codeS.substring(0,1));
+	            			}
 	            		}catch(NumberFormatException e) {
 	            			System.out.println("Erreur"+ codeS);
 	            		}
@@ -138,9 +141,34 @@ public class ConnectAPI {
 	            }
 	            station.setArrondissement(arrondissement);
 
+                int departement = 0;
+                String dep = ligne.getString("code_insee_commune");
+                if( dep.length()>= 2) {
+                   try {
+                	   departement = Integer.parseInt(dep.substring(0,2));
+                   }catch(NumberFormatException e) {
+	            			System.out.println("Erreur"+ dep);
+	            		}
+                }
+                station.setDepartement(departement);
+	            // Ajouter la station à la liste des stations de l'objet Carte
+	            
+	            int mobilite =0;
+	  		  String mob= ligne.getString("stationcode");
+	  		  if(mob.length()>= 2) {
+                  try {
+               	   mobilite = Integer.parseInt(mob.substring(0,2));
+                  }catch(NumberFormatException e) {
+	            			System.out.println("Erreur"+ mob);
+	            		}
+               }
+               station.setMobile(mobilite);
 	            // Ajouter la station à la liste des stations de l'objet Carte
 	            carte.addStation(station);  // c est l'instance de la classe Carte
+	            
 		  }
+		  
+		  
 	  }catch(Exception err) {
 		  System.out.println("Erreur "+ err);
 	  }

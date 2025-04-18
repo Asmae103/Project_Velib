@@ -1,21 +1,21 @@
 package modele;
 
 public class Station {
-	private int  deparetement, capacite, velosDispo, attachesDispo , arrondissement;
+	private int  departement, capacite, velosDispo, attachesDispo , arrondissement , mobile;
 	private String nom, ville, numero, cb, statutOuvert;
-	private boolean mobile;
+	
 
 	public Station() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Station(int arrondissement, int deparetement, int capacite, int velosDispo, int attachesDispo, String numero,
-			String nom, String ville, String cb, String statutOuvert, boolean mobile) {
+	public Station(int arrondissement, int departement, int capacite, int velosDispo, int attachesDispo, String numero,
+			String nom, String ville, String cb, String statutOuvert, int mobile) {
 		super();
 		this.numero = numero;
 		this.arrondissement = arrondissement;
-		this.deparetement = deparetement;
+		this.departement = departement;
 		this.capacite = capacite;
 		this.velosDispo = velosDispo;
 		this.attachesDispo = attachesDispo;
@@ -49,12 +49,12 @@ public class Station {
 		this.arrondissement = arrondissement2;
 	}
 
-	public int getDeparetement() {
-		return deparetement;
+	public int getDepartement() {
+		return departement;
 	}
 
-	public void setDeparetement(int deparetement) {
-		this.deparetement = deparetement;
+	public void setDepartement(int departement) {
+		this.departement = departement;
 	}
 
 	public int getCapacite() {
@@ -113,17 +113,17 @@ public class Station {
 		this.statutOuvert = statutOuvert;
 	}
 
-	public boolean isMobile() {
+	public int getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(boolean mobile) {
-		this.mobile = mobile;
+	public void setMobile(int mobilite) {
+		this.mobile = mobilite;
 	}
 
 	@Override
 	public String toString() {
-		return "Station [Numero=" + numero + ", Arrondissement=" + arrondissement + ", Deparetement=" + deparetement
+		return "Station [Numero=" + numero + ", Arrondissement=" + arrondissement + ", Departement=" + departement
 				+ ", Capacité=" + capacite + ", VelosDispo=" + velosDispo + ", AttachesDispo=" + attachesDispo
 				+ ", Nom=" + nom + ", Ville=" + ville + ", CB=" + cb + ", StatutOuvert=" + statutOuvert + ", Mobile="
 				+ mobile + "]";
